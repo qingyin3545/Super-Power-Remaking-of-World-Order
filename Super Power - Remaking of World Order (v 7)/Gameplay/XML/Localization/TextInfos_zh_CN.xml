@@ -10094,7 +10094,7 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI">
-			<Text>[COLOR_SELECTED_TEXT]旗本武士[ENDCOLOR]</Text>
+			<Text>旗本武士</Text>
 			<Plurality>2</Plurality>
 		</Replace>
 
@@ -14932,6 +14932,9 @@
 			[NEWLINE][ICON_BULLET]海关提供额外+15[ICON_RES_CONSUMER]商品。
 			[NEWLINE][ICON_BULLET]圣地可为周围单位恢复5HP。
 			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_SAPPER_HELP">
+			<Text>攻城+66%战斗力，当在城市周边时，所有2格内的友方单位获得攻城+50%加成。</Text>
 		</Replace>
 	</Language_zh_CN>
 </GameData>

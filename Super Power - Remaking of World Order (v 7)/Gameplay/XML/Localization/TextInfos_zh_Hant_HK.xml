@@ -9962,7 +9962,7 @@
 		</Row>
 
 		<Replace Tag="TXT_KEY_UNIT_JAPANESE_SAMURAI">
-			<Text>[COLOR_SELECTED_TEXT]旗本武士[ENDCOLOR]</Text>
+			<Text>旗本武士</Text>
 			<Plurality>2</Plurality>
 		</Replace>
 
@@ -14731,6 +14731,9 @@
 			[NEWLINE][ICON_BULLET]海關提供額外+15[ICON_RES_CONSUMER]商品。
 			[NEWLINE][ICON_BULLET]聖地可為周圍單位恢復5HP。
 			</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PROMOTION_SAPPER_HELP">
+			<Text>攻城+66%戰鬥力，當在城市周邊時，所有2格內的友方單位獲得攻城+50%加成。</Text>
 		</Replace>
 	</Language_zh_Hant_HK>
 </GameData>
