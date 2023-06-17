@@ -271,6 +271,11 @@
 			<Where Name="BATTLE_CAPTURE_NEW_RULE"/>
 			<Set Value="1"/>
 		</Update>
+
+		<Update>
+			<Where Name="BUGFIX_NAVAL_NEAREST_WATER"/>
+			<Set Value="1"/>
+		</Update>
 	</CustomModOptions>
 
 
@@ -393,7 +398,7 @@
 		</Row>
 
 		<Update>
-			<Where Type="GAMEOPTION_SP_CORPS_MODE_HIGH"/>
+			<Where Type="GAMEOPTION_SP_CORPS_MODE_DISABLE"/>
 			<Set Default="1"/>
 		</Update>
 		<Update>
