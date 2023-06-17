@@ -2023,7 +2023,7 @@
 			<PortraitIndex>7</PortraitIndex>
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_MELEE</PediaType>
-			<PediaEntry>TXT_KEY_PROMOTION_CHARGE_2</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_CHARGE_3</PediaEntry>
 			<HeavyChargeCollateralPercent>50</HeavyChargeCollateralPercent>
 			<HeavyChargeExtraDamage>10</HeavyChargeExtraDamage>
 		</Row>
@@ -4113,7 +4113,7 @@
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_EVASION_I</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_EVASION_I</PediaEntry>
 		</Row>
 		</UnitPromotions>
 
@@ -4294,7 +4294,7 @@
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>SP_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SHARED</PediaType>
-			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_EVASION_II</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_EVASION_II</PediaEntry>
 		</Row>
 
 		<!--<Row>
@@ -4802,7 +4802,7 @@
 			<PortraitIndex>56</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_MOHAWK</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_MOHAWK</PediaEntry>
 		</Row>
 
 		<Row>
@@ -5330,8 +5330,8 @@
 			<CannotBeChosen>true</CannotBeChosen>
 			<NearbyEnemyCombatMod>-33</NearbyEnemyCombatMod>
 			<NearbyEnemyCombatRange>1</NearbyEnemyCombatRange>
-			<PortraitIndex>59</PortraitIndex>
-			<IconAtlas>ABILITY_ATLAS</IconAtlas>
+			<PortraitIndex>16</PortraitIndex>
+			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_HAKA_WAR_DANCE</PediaEntry>
 		</Row>
@@ -5361,7 +5361,7 @@
 			<PortraitIndex>13</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_ATTACK_BONUS</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_ATTACK_BONUS</PediaEntry>
 		</Row>
 		<Row>
 			<Type>PROMOTION_FLANK_ATTACK_BONUS</Type>
@@ -5588,7 +5588,7 @@
 			<PortraitIndex>56</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
-			<PediaEntry>TXT_KEY_PEDIA_PROMOTION_JAGUAR</PediaEntry>
+			<PediaEntry>TXT_KEY_PROMOTION_JAGUAR</PediaEntry>
 		</Row>
 
 		<Row>
