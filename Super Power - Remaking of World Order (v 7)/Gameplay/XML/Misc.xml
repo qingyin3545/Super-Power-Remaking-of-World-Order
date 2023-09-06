@@ -443,7 +443,22 @@
 			<Where ProcessType="PROCESS_RESEARCH"/>
 		</Update>
 	</Process_Flavors>
-	
-	
+
+	<!-- Start bias -->
+	<Table name="Civilization_Start_Prefer_Mountain">
+		<Column name="CivilizationType" type="text"  />
+		<Column name="StartPreferMountain" type="boolean"  default="0"/>
+	</Table>
+	<Table name="Civilization_Start_Prefer_Snow">
+		<Column name="CivilizationType" type="text"  />
+		<Column name="StartPreferSnow" type="boolean"  default="0"/>
+	</Table>
+
+	<Civilization_Start_Prefer_Mountain>
+		<Row>
+			<CivilizationType>CIVILIZATION_INCA</CivilizationType>
+			<StartPreferMountain>true</StartPreferMountain>
+		</Row>
+	</Civilization_Start_Prefer_Mountain>
 
 </GameData>
