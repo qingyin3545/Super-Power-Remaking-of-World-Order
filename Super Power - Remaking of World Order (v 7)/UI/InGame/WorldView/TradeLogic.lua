@@ -1,7 +1,6 @@
 --==========================================================
 -- Modified by bc1 from 1.0.3.276 code using Notepad++
 -- code is common using IsCiv5notVanilla and IsCiv5BNW switches
--- show missing cash for trade agreements
 --==========================================================
 include("IconSupport");
 include("InstanceManager");
@@ -164,7 +163,6 @@ local g_itemControls = {
 [ TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT or false ] = { Controls.UsPocketResearchAgreement, Controls.UsTableResearchAgreement, Controls.ThemPocketResearchAgreement, Controls.ThemTableResearchAgreement },
 [ TradeableItems.TRADE_ITEM_DIPLOMATIC_MARRIAGE or false ] = { Controls.UsPocketMarriage, Controls.UsTableMarriage, Controls.ThemPocketMarriage, Controls.ThemTableMarriage },
 [ TradeableItems.TRADE_ITEM_DUAL_EMPIRE_TREATY or false ] = { Controls.UsPocketDualEmpire, Controls.UsTableDualEmpire, Controls.ThemPocketDualEmpire, Controls.ThemTableDualEmpire },
-[ TradeableItems.TRADE_ITEM_TRADE_AGREEMENT or false ] = { Controls.UsPocketTradeAgreement, Controls.UsTableTradeAgreement, Controls.ThemPocketTradeAgreement, Controls.ThemTableTradeAgreement },
 [ TradeableItems.TRADE_ITEM_DECLARATION_OF_FRIENDSHIP or false ] = { Controls.UsPocketDoF, Controls.UsTableDoF, Controls.ThemPocketDoF, Controls.ThemTableDoF, Controls.ThemTableDoF },
 }
 g_itemControls[ false ] = nil
@@ -186,8 +184,6 @@ local g_pocketControls = {
 	Controls.ThemPocketMarriage,
 	Controls.UsPocketDualEmpire,
 	Controls.ThemPocketDualEmpire,
---	Controls.UsPocketTradeAgreement, --Trade agreement disabled for now
---	Controls.ThemPocketTradeAgreement, --Trade agreement disabled for now
 	Controls.UsPocketAllowEmbassy,
 	Controls.ThemPocketAllowEmbassy,
 	Controls.UsPocketDoF,
@@ -903,25 +899,6 @@ function ResetDisplay( diploMessage )
 		local bShowPocketDualEmpire = ourPlayer:IsAbleToDualEmpire() or theirPlayer:IsAbleToDualEmpire()
 		Controls.UsPocketDualEmpire:SetHide( isSameTeam or not bShowPocketDualEmpire )
 		Controls.ThemPocketDualEmpire:SetHide( isSameTeam or not bShowPocketDualEmpire )
-		
-		----------------------------------------------------------------------------------
-		-- pocket Trade Agreement
-		----------------------------------------------------------------------------------
-
-		-- Are we not allowed to give TA? (don't have tech, or are already providing it to them)
-
-		toolTip = L"TXT_KEY_DIPLO_TRADE_AGREEMENT_TT"
-		if ourTeam:IsHasTradeAgreement( theirTeamID ) then
-			toolTip = toolTip .. "[COLOR_POSITIVE_TEXT]" .. L"TXT_KEY_DIPLO_TRADE_AGREEMENT_EXISTS" .. "[ENDCOLOR]"
-		elseif not ourTeam:IsTradeAgreementTradingAllowed() and not theirTeam:IsTradeAgreementTradingAllowed() then
-			toolTip = toolTip .. "[COLOR_WARNING_TEXT]" .. L"TXT_KEY_DIPLO_TRADE_AGREEMENT_NO_TECH" .. "[ENDCOLOR]"
-		else
-			toolTip = L"TXT_KEY_DIPLO_TRADE_AGREEMENT_NO_AGREEMENT"
-		end
-		SetEnabledAndToolTip( Controls.UsPocketTradeAgreement, deal:IsPossibleToTradeItem( ourPlayerID, theirPlayerID, TradeableItems.TRADE_ITEM_TRADE_AGREEMENT, g_iDealDuration ), toolTip )
-		SetEnabledAndToolTip( Controls.ThemPocketTradeAgreement, deal:IsPossibleToTradeItem( theirPlayerID, ourPlayerID, TradeableItems.TRADE_ITEM_TRADE_AGREEMENT, g_iDealDuration ), toolTip )
-		--Controls.UsPocketTradeAgreement:SetHide( isSameTeam or ourTeam:IsHasTradeAgreement( theirTeamID ) )
-		--Controls.ThemPocketTradeAgreement:SetHide( isSameTeam or theirTeam:IsHasTradeAgreement( ourTeamID ) )
 
 		----------------------------------------------------------------------------------
 		-- Pocket Declaration of Friendship
@@ -1874,31 +1851,6 @@ do
 	end
 	Controls.UsTableDualEmpire:RegisterCallback( Mouse.eLClick, RemoveDualEmpireAgreement )
 	Controls.ThemTableDualEmpire:RegisterCallback( Mouse.eLClick, RemoveDualEmpireAgreement )
-end
-
------------------------------------------------------------------------------------------------------------------------
--- Trade Agreement Handlers
------------------------------------------------------------------------------------------------------------------------
-do
-	local function AddTradeAgreement()
-
-		-- Trade Agreement is required on both sides
-
-		g_Deal:AddTradeAgreement( g_iUs, g_iDealDuration )
-		g_Deal:AddTradeAgreement( g_iThem, g_iDealDuration )
-		return DoUIDealChangedByHuman()
-	end
-	Controls.UsPocketTradeAgreement:RegisterCallback( Mouse.eLClick, AddTradeAgreement )
-	Controls.ThemPocketTradeAgreement:RegisterCallback( Mouse.eLClick, AddTradeAgreement )
-
-	local function RemoveTradeAgreement()
-		-- Remove from BOTH sides of the table
-		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_TRADE_AGREEMENT, g_iUs )
-		g_Deal:RemoveByType( TradeableItems.TRADE_ITEM_TRADE_AGREEMENT, g_iThem )
-		return DoUIDealChangedByHuman( true )
-	end
-	Controls.UsTableTradeAgreement:RegisterCallback( Mouse.eLClick, RemoveTradeAgreement )
-	Controls.ThemTableTradeAgreement:RegisterCallback( Mouse.eLClick, RemoveTradeAgreement )
 end
 
 -----------------------------------------------------------------------------------------------------------------------

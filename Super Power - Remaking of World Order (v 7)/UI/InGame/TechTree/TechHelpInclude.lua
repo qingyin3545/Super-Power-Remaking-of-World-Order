@@ -288,14 +288,6 @@ function GetBaseHelpTextForTech( iTechID )
 		numAbilities = numAbilities + 1;
 	end
 	
-	if thisTech.TradeAgreementTradingAllowed then
-		if numAbilities > 0 then
-				abilitiesString = abilitiesString .. "[NEWLINE] [ICON_BULLET] ";
-		end
-		abilitiesString = abilitiesString .. Locale.ConvertTextKey( "TXT_KEY_ABLTY_T_PACT_STRING" );
-		numAbilities = numAbilities + 1;
-	end
-	
 	if thisTech.BridgeBuilding then
 		if numAbilities > 0 then
 				abilitiesString = abilitiesString .. "[NEWLINE] [ICON_BULLET] ";

@@ -110,7 +110,6 @@ g_NameTable[ NotificationTypes.NOTIFICATION_DEAL_EXPIRED_RESOURCE ]					= "Diplo
 g_NameTable[ NotificationTypes.NOTIFICATION_DEAL_EXPIRED_OPEN_BORDERS ]					= "DiplomacyX";
 g_NameTable[ NotificationTypes.NOTIFICATION_DEAL_EXPIRED_DEFENSIVE_PACT ]				= "DiplomacyX";
 g_NameTable[ NotificationTypes.NOTIFICATION_DEAL_EXPIRED_RESEARCH_AGREEMENT ]				= "DiplomacyX";
-g_NameTable[ NotificationTypes.NOTIFICATION_DEAL_EXPIRED_TRADE_AGREEMENT ]				= "DiplomacyX";
 g_NameTable[ NotificationTypes.NOTIFICATION_TECH_AWARD ]						= "TechAward";
 g_NameTable[ NotificationTypes.NOTIFICATION_PLAYER_DEAL ]						= "Diplomacy";
 g_NameTable[ NotificationTypes.NOTIFICATION_PLAYER_DEAL_RECEIVED ]					= "Diplomacy";

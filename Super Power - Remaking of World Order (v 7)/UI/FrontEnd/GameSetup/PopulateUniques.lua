@@ -153,8 +153,6 @@ if not EUI then
 					g_deal:AddUnitTrade( fromPlayerID, item[4] )
 				elseif id == TradeableItems.TRADE_ITEM_OPEN_BORDERS then
 					g_deal:AddOpenBorders( fromPlayerID, item[2] )
-				elseif id == TradeableItems.TRADE_ITEM_TRADE_AGREEMENT then
-					g_deal:AddTradeAgreement( fromPlayerID, item[2] )
 				elseif id == TradeableItems.TRADE_ITEM_PERMANENT_ALLIANCE then
 					print( "Error - alliance not supported by game DLL")--g_deal:AddPermamentAlliance()
 				elseif id == TradeableItems.TRADE_ITEM_SURRENDER then
