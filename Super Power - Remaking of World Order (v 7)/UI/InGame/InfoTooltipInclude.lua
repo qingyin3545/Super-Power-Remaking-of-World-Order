@@ -2925,9 +2925,6 @@ if Game then
 			[ TradeableItems.TRADE_ITEM_OPEN_BORDERS or-1] = function( from, item )
 				return ScratchDeal:AddOpenBorders( from, item[2] )
 			end,
-			[ TradeableItems.TRADE_ITEM_TRADE_AGREEMENT or-1] = function( from, item )
-				return ScratchDeal:AddTradeAgreement( from, item[2] )
-			end,
 			[ TradeableItems.TRADE_ITEM_PERMANENT_ALLIANCE or-1] = function()
 				print( "Error - alliance not supported by game DLL")--ScratchDeal:AddPermamentAlliance()
 			end,
@@ -3918,16 +3915,6 @@ if Game then
 					insert( treaties, negativeOrPositiveTextColor[isActiveDeal] .. "[ICON_RESEARCH]"
 							.. L"TXT_KEY_DO_RESEARCH_AGREEMENT"
 							.. "[ENDCOLOR]" .. GetDealTurnsRemaining( TradeableItems.TRADE_ITEM_RESEARCH_AGREEMENT )
-					)
-				end
-
-				-- Trade Agreement
-				isTradeable = ScratchDeal:IsPossibleToTradeItem( playerID, activePlayerID, TradeableItems.TRADE_ITEM_TRADE_AGREEMENT, g_dealDuration )
-				isActiveDeal = activeTeam:IsHasTradeAgreement(teamID)
-				if isTradeable or isActiveDeal then
-					insert( treaties, negativeOrPositiveTextColor[isActiveDeal] .. "[ICON_GOLD]"
-							.. L"TXT_KEY_DIPLO_TRADE_AGREEMENT":lower()
-							.. "[ENDCOLOR]" .. GetDealTurnsRemaining( TradeableItems.TRADE_ITEM_TRADE_AGREEMENT )
 					)
 				end
 

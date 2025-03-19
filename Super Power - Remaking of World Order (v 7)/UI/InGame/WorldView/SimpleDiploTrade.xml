@@ -89,7 +89,6 @@
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_RESCH_AGREEMENT" ID="UsPocketResearchAgreement"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_MARRIAGE" ID="UsPocketMarriage"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DUAL_EMPIRE_TREATY" ID="UsPocketDualEmpire"/>
-							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_TRADE_AGREEMENT" ID="UsPocketTradeAgreement" Hidden="1"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_DECLARATION_OF_FRIENDSHIP" ID="UsPocketDoF"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_CITIES" ID="UsPocketCities"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="[ICON_MINUS] TXT_KEY_DIPLO_OTHER_PLAYERS" ID="UsPocketOtherPlayer"/>
@@ -133,7 +132,6 @@
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_RESCH_AGREEMENT" ID="ThemPocketResearchAgreement"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_MARRIAGE" ID="ThemPocketMarriage"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DUAL_EMPIRE_TREATY" ID="ThemPocketDualEmpire"/>
-							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_TRADE_AGREEMENT" ID="ThemPocketTradeAgreement" Hidden="1"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_DECLARATION_OF_FRIENDSHIP" ID="ThemPocketDoF"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_CITIES" ID="ThemPocketCities"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_OTHER_PLAYERS" ID="ThemPocketOtherPlayer"/>
@@ -188,7 +186,6 @@
 							<Button Style="TradeItemButton" Anchor="L,C" String="Research agreement" ID="UsTableResearchAgreement"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_MARRIAGE" ID="UsTableMarriage"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DUAL_EMPIRE_TREATY" ID="UsTableDualEmpire"/>
-							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_TRADE_AGREEMENT" ID="UsTableTradeAgreement"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_DECLARATION_OF_FRIENDSHIP" ID="UsTableDoF"/>
 							<Stack Anchor="L,T" Offset="0,0" Size="128,0" StackGrowth="Bottom" Padding="5" Hidden="0" ID="UsTableCitiesStack"/>
 							<Stack Anchor="L,T" Offset="0,0" Size="128,0" StackGrowth="Bottom" Padding="5" Hidden="0" ID="UsTableDeclareWarStack">
@@ -245,7 +242,6 @@
 							<Button Style="TradeItemButton" Anchor="L,C" String="Research agreement" ID="ThemTableResearchAgreement"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_MARRIAGE" ID="ThemTableMarriage"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DUAL_EMPIRE_TREATY" ID="ThemTableDualEmpire"/>
-							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_TRADE_AGREEMENT" ID="ThemTableTradeAgreement"/>
 							<Button Style="TradeItemButton" Anchor="L,C" String="TXT_KEY_DIPLO_DECLARATION_OF_FRIENDSHIP" ID="ThemTableDoF"/>
 							<Stack Anchor="L,T" Offset="0,0" Size="128,0" StackGrowth="Bottom" Padding="5" Hidden="0" ID="ThemTableCitiesStack"/>
 							<Stack Anchor="L,T" Offset="0,0" Size="128,0" StackGrowth="Bottom" Padding="5" Hidden="0" ID="ThemTableDeclareWarStack">
