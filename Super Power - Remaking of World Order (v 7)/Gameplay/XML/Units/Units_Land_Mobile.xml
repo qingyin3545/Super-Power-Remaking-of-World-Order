@@ -44,7 +44,7 @@
 			<Type>UNIT_SCOUT</Type>
 			<BaseSightRange>3</BaseSightRange>
 			<Combat>5</Combat>
-			<Cost>15</Cost>
+			<Cost>25</Cost>
 			<Moves>3</Moves>
 			<CombatClass>UNITCOMBAT_RECON</CombatClass>
 			<Domain>DOMAIN_LAND</Domain>
