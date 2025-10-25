@@ -461,12 +461,12 @@
 		
 	</Building_ClassesNeededInCity>
 
-	<Building_ClassesNeededGlobal>
+	<Building_ClassNeededAnywhere>
 		<Row>
 			<BuildingType>BUILDING_COAL_PLANT_EXTEND_IZ</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_INDUSTRIAL_ZONE</BuildingClassType>
 		</Row>
-	</Building_ClassesNeededGlobal>
+	</Building_ClassNeededAnywhere>
 
 
 

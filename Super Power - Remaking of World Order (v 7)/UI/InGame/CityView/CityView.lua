@@ -2106,7 +2106,7 @@ function DoUpdateProductionInfo( bNoProduction )
 		end
 	end
 	
-	local iBaseProductionPT = pCity:GetBaseYieldRate(YieldTypes.YIELD_PRODUCTION) + pCity:GetExtraBaseYieldRateTimes100(YieldTypes.YIELD_PRODUCTION) / 100;
+	local iBaseProductionPT = pCity:GetBaseYieldRate(YieldTypes.YIELD_PRODUCTION);
 	
 	-- Output
 	local strBase = Locale.ConvertTextKey("TXT_KEY_YIELD_BASE", iBaseProductionPT, "[ICON_PRODUCTION]");

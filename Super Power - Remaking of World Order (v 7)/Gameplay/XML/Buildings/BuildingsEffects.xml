@@ -7599,4 +7599,12 @@
 			<Yield>5</Yield>
 		</Row>
 	</Building_SpecialistYieldModifiers>
+		
+	<Building_CityStateTradeRouteYieldModifiersGlobal>
+		<Row>
+			<BuildingType>BUILDING_HANSEATIC_LEAGUE</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>4</Yield>
+		</Row>
+	</Building_CityStateTradeRouteYieldModifiersGlobal>
 </GameData>

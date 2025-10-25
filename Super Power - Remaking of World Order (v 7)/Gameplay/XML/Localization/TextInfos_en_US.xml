@@ -16,7 +16,7 @@
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]Version 10 Final[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]Version 11[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
@@ -7412,7 +7412,7 @@
 				[COLOR_POSITIVE_TEXT]Aristocracy[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]New Cities start with an extra 1 [ICON_CITIZEN] Citizen. (But one Settler Unit still equals one Population)
 				[NEWLINE][ICON_BULLET]100% [ICON_FOOD] Food is carried over after a new [ICON_CITIZEN] Citizen is born for every Town (Cities with a [ICON_CITIZEN] Population less than 6). It won't be effective instantly but after the next new [ICON_CITIZEN] Citizen is born.
-				[NEWLINE][ICON_BULLET]The accumulation of Food Kept and the accumulation of [ICON_FOOD] Food in all city immediately filled up.
+				[NEWLINE][ICON_BULLET]The accumulation of [ICON_FOOD] Food in all city immediately filled up.
 			</Text>
 		</Replace>
 		<Replace Tag="TXT_KEY_POLICY_LANDED_ELITE_HELP" >
@@ -8181,7 +8181,7 @@
 		</Replace>
 				
 		<Replace Tag="TXT_KEY_POLICY_OPEN_SOCIETY_HELP" >
-			<Text>[COLOR_POSITIVE_TEXT]Avant Garde[ENDCOLOR][NEWLINE]The rate at which [ICON_GREAT_PEOPLE] Great People are born is increased by 25%. +3% [ICON_TOURISM] Tourism to whole country when any new Great Person is born.</Text>
+			<Text>[COLOR_POSITIVE_TEXT]Avant Garde[ENDCOLOR][NEWLINE]The rate at which [ICON_GREAT_PEOPLE] Great People are born is increased by 25%. +300 [ICON_TOURISM] Tourism to all Civilizations when any Great Person is born.</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CREATIVE_EXPRESSION_HELP" >
@@ -10723,8 +10723,9 @@
 		
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
 			<Text>
-				[ICON_BULLET]Units ignore terrain costs when moving into any tile with Hills.Civilian units can enter mountain tiles. No maintenance costs for improvements in Hills; half cost elsewhere. Workers can remove [ICON_RES_SHEEP] Sheep on the tiles with Hills.
-				[NEWLINE][ICON_BULLET]Settlers will not lose HP if end turns on mountain tiles, and can build cities on them.Mountain cities gain additional [ICON_RESEARCH]science and [ICON_FOOD]food (increases by eras).
+				[ICON_BULLET]Units can cross Mountains and ignore terrain costs when entering any Hill or Mountain.
+				[NEWLINE][ICON_BULLET]No maintenance costs for improvements in Hills. Workers can remove [ICON_RES_SHEEP] Sheep on the tiles with Hills.
+				[NEWLINE][ICON_BULLET]Cities may be built on Mountains. Mountain cities gain additional [ICON_RESEARCH]science and [ICON_FOOD]food (increases by eras).
 			</Text>
 		</Replace>
 
@@ -17435,7 +17436,7 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_FAST_SET_UP_HELP">
 			<Text>
-				[ICON_BULLET]Movement cost of Set Up reduced by 100%.
+				[ICON_BULLET]Movement cost in enemy territory will not increase.
 			</Text>
 		</Replace>
 
@@ -17537,9 +17538,9 @@
 		<Row Tag="TXT_KEY_DO_RESEARCH_AGREEMENT_WITH">
 			<Text>[COLOR_POSITIVE_TEXT]Research Agreement - {1_CivName:textkey}[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GOODY_SCIENCE">
+		<Replace Tag="TXT_KEY_GOODY_SCIENCE">
 			<Text>You find a lot of advanced tools! Get {1_Num} [ICON_RESEARCH] Science!</Text>
-		</Row>
+		</Replace>
 		<Row Tag="TXT_KEY_GOODY_CHOOSE_SCIENCE">
 			<Text>Study their tools to get [ICON_RESEARCH] Science.</Text>
 		</Row>
@@ -18370,6 +18371,13 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_FOODMOD_WLTKD">
 			<Text>[NEWLINE][ICON_BULLET]We Love the King Day Modifier (Difference): {1_Num}%</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_MUST_SET_UP">
+			<Text>[ICON_MOVES]Movement cost in enemy territory increases by +1</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_PROMOTION_MUST_SET_UP">
+			<Text>[ICON_MOVES]Movement cost in enemy territory increases by +1</Text>
 		</Replace>
 	</Language_en_US>
 </GameData>

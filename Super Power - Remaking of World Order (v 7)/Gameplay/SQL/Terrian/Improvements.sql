@@ -97,9 +97,6 @@ UPDATE Improvements Set ExtraScore = 300 WHERE Type = 'IMPROVEMENT_CREATE_JUNGLE
 --UPDATE Improvements Set ExtraScore = 2000 WHERE Type = 'IMPROVEMENT_CITADEL';
 --UPDATE Improvements Set ExtraScore = 2000 WHERE Type = 'IMPROVEMENT_COASTAL_FORT';
 
---BUG fix: Superfluous Archaeologist may cause some problems
-UPDATE Improvements Set ForbidSameBuildUnitClasses = 'UNITCLASS_ARCHAEOLOGIST' WHERE Type = 'IMPROVEMENT_LANDMARK';
-
 UPDATE Improvements Set RequiresFeature = 0, RemoveWhenSetNoFuture = 1, NumWaterPlotMakesValid = 3, RequiresFlatlands = 1 WHERE Type = 'IMPROVEMENT_POLDER';
 -- IMPROVEMENT_CAIRN
 INSERT INTO Improvement_Yields (ImprovementType,		YieldType,					Yield)

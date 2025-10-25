@@ -282,12 +282,14 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 	if CorpsUnit then
 		CorpsUnit:SetHasPromotion(ArmeeID, true);
 		if iKillRandNum <= iCombineNum then
+			pUnit:SetExperience(0)
 			pUnit:Kill(true);
 		end
 		return;
 	elseif otherUnit then
 		otherUnit:SetHasPromotion(CorpsID, true);
 		if iKillRandNum <= iCombineNum then
+			pUnit:SetExperience(0)
 			pUnit:Kill(true);
 		end
 		return;
@@ -298,6 +300,7 @@ function OnCorpsArmeeSP(iPlayerID, iUnitID)
 	and not pUnit:IsNoTroops() 
 	and not (pUnit:GetLevel() > 1) 
 	then
+		pUnit:SetExperience(0)
 		pUnit:Kill(true);
 	end
 end

@@ -384,10 +384,8 @@
 			<Description>TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD</Description>
 			<ShortDescription>TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD_SHORT</ShortDescription>
 			<FasterInHills>true</FasterInHills>
-			<ImprovementMaintenanceModifier>-50</ImprovementMaintenanceModifier>
 			<NoHillsImprovementMaintenance>true</NoHillsImprovementMaintenance>
-			<CanFoundMountainCity>true</CanFoundMountainCity>
-			<CiviliansFreePromotion>PROMOTION_INCA_CAN_CROSS_MOUNTAINS</CiviliansFreePromotion>
+			<MountainPass>true</MountainPass>
 		</Row>
 		<Row>
 			<Type>TRAIT_IGNORE_TERRAIN_IN_FOREST</Type>
@@ -1146,13 +1144,13 @@
 		</Row>
 	</Building_YieldChanges>
 
-	<Building_YieldChangesPerEra>
+	<Building_YieldChangesEraScalingTimes100>
 		<Row>
 			<BuildingType>BUILDING_TB_CAPITAL_BUILDINGS_CHEAPER</BuildingType>
 			<YieldType>YIELD_PRODUCTION</YieldType>
-			<Yield>1</Yield>
+			<Yield>100</Yield>
 		</Row>
-	</Building_YieldChangesPerEra>
+	</Building_YieldChangesEraScalingTimes100>
 
 	<Building_RiverPlotYieldChanges>
 		<Row>

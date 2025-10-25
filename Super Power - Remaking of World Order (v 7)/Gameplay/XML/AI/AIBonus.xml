@@ -344,7 +344,7 @@
 		</Row>
 	</Policy_SpecialistExtraYields>
 		
-	<Policy_YieldPerPopChanges>
+	<Policy_YieldPerPopChangesTimes100>
 		<Row>
 			<PolicyType>POLICY_AI_BONUS_RESEARCH_LV2</PolicyType>
 			<YieldType>YIELD_SCIENCE</YieldType>
@@ -360,7 +360,7 @@
 			<YieldType>YIELD_SCIENCE</YieldType>
 			<Yield>5</Yield>
 		</Row>
-	</Policy_YieldPerPopChanges>
+	</Policy_YieldPerPopChangesTimes100>
 
 	
 	<Policy_BuildingClassYieldModifiers>

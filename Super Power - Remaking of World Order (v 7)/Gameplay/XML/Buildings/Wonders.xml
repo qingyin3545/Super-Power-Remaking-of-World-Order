@@ -385,7 +385,7 @@
 			<NeverCapture>true</NeverCapture>
 			<IconAtlas>BW_ATLAS_1</IconAtlas>
 			<PortraitIndex>20</PortraitIndex>
-			<GreatWorksTourismModifierGlobal>50</GreatWorksTourismModifierGlobal>
+			<GlobalGreatWorksTourismModifier>50</GlobalGreatWorksTourismModifier>
 		</Row>
 		<Row>
 			<Type>BUILDING_NATIONAL_SCULPTURE</Type>
@@ -504,7 +504,7 @@
 			<NeverCapture>true</NeverCapture>
 			<IconAtlas>SPWondersUB_ATLAS</IconAtlas>
 			<PortraitIndex>50</PortraitIndex>
-			<GreatWorksTourismModifierGlobal>50</GreatWorksTourismModifierGlobal>
+			<GlobalGreatWorksTourismModifier>50</GlobalGreatWorksTourismModifier>
 		</Row>
 
 		<Row>
@@ -1591,7 +1591,6 @@
 			<PortraitIndex>0</PortraitIndex>
 			<WonderSplashImage>Hanse_splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
-			<CityStateTradeRouteProductionModifierGlobal>4</CityStateTradeRouteProductionModifierGlobal>
 		</Row>
 		<Row>
 			<Type>BUILDING_ALHAMBRA</Type>
@@ -1885,7 +1884,7 @@
 			<WonderSplashAudio>AS2D_WONDER_SPEECH_NEUSCHWANSTEIN</WonderSplashAudio>
 			<EnhancedYieldTech>TECH_ARCHITECTURE</EnhancedYieldTech>
 			<TechEnhancedTourism>6</TechEnhancedTourism>
-			<GreatWorksTourismModifierGlobal>50</GreatWorksTourismModifierGlobal>
+			<GlobalGreatWorksTourismModifier>50</GlobalGreatWorksTourismModifier>
 		</Row>
 		<Row>
 			<Type>BUILDING_UFFIZI</Type>
@@ -2345,7 +2344,7 @@
 			<PortraitIndex>4</PortraitIndex>
 			<WonderSplashImage>PEARL_TOWER_splash.dds</WonderSplashImage>
 			<WonderSplashAnchor>L,B</WonderSplashAnchor>
-			<LandmarksTourismPercentGlobal>50</LandmarksTourismPercentGlobal>
+			<GlobalLandmarksTourismPercent>50</GlobalLandmarksTourismPercent>
 		</Row>
 		<Row>
 			<Type>BUILDING_SYDNEY_OPERA_HOUSE</Type>

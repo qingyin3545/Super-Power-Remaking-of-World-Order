@@ -224,8 +224,8 @@
 				<AIAdvancedStartPercent>150</AIAdvancedStartPercent>
 				<AIFreeXP>5</AIFreeXP>
 				<AIFreeXPPercent>100</AIFreeXPPercent>
-				<StrategicResourceMod>100</StrategicResourceMod>
-				<StrategicResourceModPerEra>3</StrategicResourceModPerEra>
+				<AIStrategicResourceMod>100</AIStrategicResourceMod>
+				<AIStrategicResourceModPerEra>3</AIStrategicResourceModPerEra>
 			</Set>
 		</Update>
 
@@ -284,8 +284,8 @@
 				<AIAdvancedStartPercent>170</AIAdvancedStartPercent>
 				<AIFreeXP>5</AIFreeXP>
 				<AIFreeXPPercent>100</AIFreeXPPercent>
-				<StrategicResourceMod>100</StrategicResourceMod>
-				<StrategicResourceModPerEra>5</StrategicResourceModPerEra>
+				<AIStrategicResourceMod>100</AIStrategicResourceMod>
+				<AIStrategicResourceModPerEra>5</AIStrategicResourceModPerEra>
 			</Set>
 		</Update>
 
@@ -345,9 +345,10 @@
 				<AIAdvancedStartPercent>170</AIAdvancedStartPercent>
 				<AIFreeXP>5</AIFreeXP>
 				<AIFreeXPPercent>100</AIFreeXPPercent>
-				<StrategicResourceMod>100</StrategicResourceMod>
-				<StrategicResourceModPerEra>8</StrategicResourceModPerEra>
+				<AIStrategicResourceMod>100</AIStrategicResourceMod>
+				<AIStrategicResourceModPerEra>8</AIStrategicResourceModPerEra>
 				<AIFirstProphetPercent>100</AIFirstProphetPercent>
+				<AIMinExpansionFlavor>2</AIMinExpansionFlavor>
 			</Set>
 		</Update>
 
@@ -407,9 +408,10 @@
 				<AIAdvancedStartPercent>170</AIAdvancedStartPercent>
 				<AIFreeXP>5</AIFreeXP>
 				<AIFreeXPPercent>100</AIFreeXPPercent>
-				<StrategicResourceMod>100</StrategicResourceMod>
-				<StrategicResourceModPerEra>10</StrategicResourceModPerEra>
+				<AIStrategicResourceMod>100</AIStrategicResourceMod>
+				<AIStrategicResourceModPerEra>10</AIStrategicResourceModPerEra>
 				<AIFirstProphetPercent>90</AIFirstProphetPercent>
+				<AIMinExpansionFlavor>4</AIMinExpansionFlavor>
 			</Set>
 		</Update>
 
@@ -469,9 +471,10 @@
 				<AIAdvancedStartPercent>170</AIAdvancedStartPercent>
 				<AIFreeXP>5</AIFreeXP>
 				<AIFreeXPPercent>100</AIFreeXPPercent>
-				<StrategicResourceMod>120</StrategicResourceMod>
-				<StrategicResourceModPerEra>10</StrategicResourceModPerEra>
+				<AIStrategicResourceMod>120</AIStrategicResourceMod>
+				<AIStrategicResourceModPerEra>10</AIStrategicResourceModPerEra>
 				<AIFirstProphetPercent>80</AIFirstProphetPercent>
+				<AIMinExpansionFlavor>6</AIMinExpansionFlavor>
 			</Set>
 		</Update>
 	</HandicapInfos>

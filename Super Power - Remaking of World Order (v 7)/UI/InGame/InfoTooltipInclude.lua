@@ -1170,16 +1170,15 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		TradeRouteTargetBonus = "[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_TRADE_TO_OTHER_CITY_BONUS" .. " %+i"..g_currencyIcon.."[ICON_ARROW_RIGHT]",
 		NumTradeRouteBonus = "%+i[ICON_INTERNATIONAL_TRADE]" .. L"TXT_KEY_DECLARE_WAR_TRADE_ROUTES_HEADER",
 		LandmarksTourismPercent = L"TXT_KEY_LTP11" .. "%i%%[ICON_TOURISM]",	-- TOTO
-		LandmarksTourismPercentGlobal = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_LTP11" .. "%i%%[ICON_TOURISM]",	-- TOTO
+		GlobalLandmarksTourismPercent = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_LTP11" .. "%i%%[ICON_TOURISM]",	-- TOTO
 		GreatWorksTourismModifier = L"TXT_KEY_GWTM111" .. "%+i%%[ICON_TOURISM]",-- TOTO
-		GreatWorksTourismModifierGlobal = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_GWTM111" .. "%+i%%[ICON_TOURISM]",-- TOTO
+		GlobalGreatWorksTourismModifier = L"TXT_KEY_GLOBAL1" .. L"TXT_KEY_GWTM111" .. "%+i%%[ICON_TOURISM]",-- TOTO
 		XBuiltTriggersIdeologyChoice = L("TXT_KEY_XBTIC1", "%i"),			-- TOTO
 		TradeRouteSeaDistanceModifier = L"TXT_KEY_TSDM1" .. "%+i%%",
 	--y	TradeRouteSeaGoldBonus = L"TXT_KEY_TRSGB1" .. "%+i%%[ICON_GOLD]",	-- TOTO
 		TradeRouteLandDistanceModifier = L"TXT_KEY_TRLDM1" .. "%+i%%",		-- TOTO
 	--y	TradeRouteLandGoldBonus = L"TXT_KEY_TRLGB1" .. "%+i%%[ICON_GOLD]",	-- TOTO 
 		CityStateTradeRouteProductionModifier = L"TXT_KEY_CSTRPM1111" .. "%+i%%[ICON_PRODUCTION]",-- TOTO
-		CityStateTradeRouteProductionModifierGlobal = L"TXT_KEY_CSTRPMG" .. "%+i%%[ICON_PRODUCTION]",-- TOTO
 		GreatScientistBeakerModifier = L"TXT_KEY_GSBM4" .. "%+i%%[ICON_RESEARCH]",-- TOTO
 	--y	TechEnhancedTourism = "",
 	--y	SpecialistCount = "",
@@ -1931,15 +1930,15 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 				("[ICON_INTERNATIONAL_TRADE]" .. L("TXT_KEY_TRADE_TO_OTHER_CITY_BONUS") .. " +" .. value .. L(yieldInfo.IconString) ..L("TXT_KEY_TRADE_BONUS_PER_ERA").. " [ICON_ARROW_LEFT]"))
 		end
 	end
-	for row in GameInfo.Building_YieldChangesPerEra(thisBuildingType) do
+	for row in GameInfo.Building_YieldChangesEraScalingTimes100(thisBuildingType) do
 		local yieldInfo = GameInfo.Yields[row.YieldType]
 		local value = row.Yield or 0
 		if yieldInfo and (value or 0) > 0 then
 			insert(tips,
-				( " +" .. value .. L(yieldInfo.IconString) ..L("TXT_KEY_TRADE_BONUS_PER_ERA")))
+				( " +" .. value / 100 .. L(yieldInfo.IconString) ..L("TXT_KEY_TRADE_BONUS_PER_ERA")))
 		end
 	end
-	for row in GameInfo.Building_YieldModifiersChangesPerEra(thisBuildingType) do
+	for row in GameInfo.Building_YieldModifiersEraScaling(thisBuildingType) do
 		local yieldInfo = GameInfo.Yields[row.YieldType]
 		local value = row.Yield or 0
 		if yieldInfo and (value or 0) > 0 then
@@ -1985,7 +1984,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 	-- Yield modifiers enhanced by Policy
 	for row in GameInfo.Policy_BuildingClassYieldModifiers( thisBuildingClassType ) do
 		if row.PolicyType and (row.YieldMod or 0) ~= 0 
-		and GameInfo.Policies[ row.PolicyType].Dummy~=1  --New
+		and GameInfo.Policies[ row.PolicyType].IsDummy~=1  --New
 		and row.PolicyType:match("^POLICY_AI_+.") == nil
 		then
 			items[row.PolicyType] = format( "%s %+i%%%s", items[row.PolicyType] or "", row.YieldMod, YieldIcons[row.YieldType] or "?" )
@@ -1995,7 +1994,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 		if IsCiv5BNW then
 			for row in GameInfo.Policy_BuildingClassTourismModifiers( thisBuildingClassType ) do
 				if row.PolicyType and (row.TourismModifier or 0) ~= 0
-				and GameInfo.Policies[ row.PolicyType].Dummy~=1  --New
+				and GameInfo.Policies[ row.PolicyType].IsDummy~=1  --New
 				and row.PolicyType:match("^POLICY_AI_+.") == nil
 				then
 					items[row.PolicyType] = format( "%s %+i%%[ICON_TOURISM]", items[row.PolicyType] or "", row.TourismModifier )
@@ -2282,7 +2281,7 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 
 	-- Required Buildings Global:
 	local buildingsGloabl = {}
-	for row in GameInfo.Building_ClassesNeededGlobal( thisBuildingType ) do
+	for row in GameInfo.Building_ClassNeededAnywhere( thisBuildingType ) do
 		local item = GetCivBuilding( activeCivilizationType, row.BuildingClassType )
 		if item and not buildingsGloabl[ item ] then
 			insert( buildingsGloabl, BuildingColor( L(item.Description) ) )
@@ -2406,14 +2405,14 @@ function GetHelpTextForBuilding( buildingID, bExcludeName, bExcludeHeader, bNoMa
 
 	-- Buildings Unlocked Global:
 	local buildingsUnlockedGlobal = {}
-	for row in GameInfo.Building_ClassesNeededGlobal( thisBuildingClassType ) do
+	for row in GameInfo.Building_ClassNeededAnywhere( thisBuildingClassType ) do
 		local buildingUnlocked = GameInfo.Buildings[ row.BuildingType ]
 		SetKey( buildingsUnlockedGlobal, buildingUnlocked and buildingUnlocked.BuildingClass )
 	end
 	items = {}
 	for buildingUnlocked in pairs(buildingsUnlockedGlobal) do
 		buildingUnlocked = GetCivBuilding( activeCivilizationType, buildingUnlocked )
-		if buildingUnlocked and GameInfo.Building_ClassesNeededGlobal{ BuildingType = buildingUnlocked.Type, BuildingClassType = buildingClassType }() then
+		if buildingUnlocked and GameInfo.Building_ClassNeededAnywhere{ BuildingType = buildingUnlocked.Type, BuildingClassType = buildingClassType }() then
 			insert( items, BuildingColor( L(buildingUnlocked.Description) ) )
 		end
 	end
@@ -3122,7 +3121,7 @@ if Game then
 	-- Yield Tooltip Helper
 	function GetYieldTooltipHelper( city, yieldID, yieldIconString )
 
-		return GetYieldTooltip( city, yieldID, city:GetBaseYieldRate( yieldID ) + city:GetExtraBaseYieldRateTimes100( yieldID ) / 100, yieldID == YieldTypes.YIELD_FOOD and city:FoodDifferenceTimes100()/100 or city:GetYieldRateTimes100( yieldID )/100, yieldIconString, city:GetYieldModifierTooltip( yieldID ) )
+		return GetYieldTooltip( city, yieldID, city:GetBaseYieldRate( yieldID ), yieldID == YieldTypes.YIELD_FOOD and city:FoodDifferenceTimes100()/100 or city:GetYieldRateTimes100( yieldID )/100, yieldIconString, city:GetYieldModifierTooltip( yieldID ) )
 	end
 	local GetYieldTooltipHelper = GetYieldTooltipHelper
 
@@ -3288,7 +3287,7 @@ if Game then
 				strModifiersString = strModifiersString .. L( "TXT_KEY_PRODMOD_FOOD_CONVERSION", productionFromFood / 100 )
 			end
 		end
-		tipText = GetYieldTooltip( city, YieldTypes.YIELD_PRODUCTION, city:GetBaseYieldRate( YieldTypes.YIELD_PRODUCTION )  + city:GetExtraBaseYieldRateTimes100( YieldTypes.YIELD_PRODUCTION ) / 100, productionPerTurn100 / 100, "[ICON_PRODUCTION]", strModifiersString ) .. "[NEWLINE][NEWLINE]" .. tipText
+		tipText = GetYieldTooltip( city, YieldTypes.YIELD_PRODUCTION, city:GetBaseYieldRate( YieldTypes.YIELD_PRODUCTION ), productionPerTurn100 / 100, "[ICON_PRODUCTION]", strModifiersString ) .. "[NEWLINE][NEWLINE]" .. tipText
 
 		-- Basic explanation of production
 		if isNoob then
@@ -3929,7 +3928,7 @@ if Game then
 				end
 
 				-- Military Promise
-				local iMilitaryPromiseTurnLeft = Players[playerID]:GetMilitaryPromiseTurnLeft(activePlayerID)
+				local iMilitaryPromiseTurnLeft = Players[playerID]:GetNumTurnsMilitaryPromise(activePlayerID)
 				if iMilitaryPromiseTurnLeft >= 0 then
 					insert( treaties, negativeOrPositiveTextColor[false] .. "[ICON_CITY_STATE]"
 							.. L"TXT_KEY_MILITARY_PROMISE"

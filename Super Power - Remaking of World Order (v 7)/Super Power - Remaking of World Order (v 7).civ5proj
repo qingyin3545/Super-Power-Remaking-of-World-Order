@@ -5,8 +5,8 @@
     <ProjectGuid>{ef76ff1b-0497-463c-a616-d02546312750}</ProjectGuid>
     <Name>(2) Super Power - Rise of Hegemony</Name>
     <Guid>f9b9c8aa-b6d1-4188-9239-c1de2207ab7c</Guid>
-    <ModVersion>10</ModVersion>
-    <Stability>Beta</Stability>
+    <ModVersion>11</ModVersion>
+    <Stability>Alpha</Stability>
     <Teaser>[COLOR_YELLOW]A Total Conversion Mod for a better late game experience and realistic modern warfare[/COLOR]</Teaser>
     <Description>A Total Conversion Mod of Sid Meier's Civilization V for a better late game experience and realistic modern warfare.  
 [NEWLINE][NEWLINE]Require CIV5 BNW 1.0.3.279[NEWLINE][NEWLINE]This MOD includes a modified version of whoward69's DLLVMC v97 for some Lua events support and multiplayer support. Source is released on https://github.com/Apeiria01/CIV5MPDLL
@@ -45,9 +45,9 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <ModReferences>
       <Association>
         <Type>Mod</Type>
-        <Name>(1)CIV5MPDLL</Name>
-        <Id>a2969a0a-e4da-41cc-9e0b-19b29aa971d8</Id>
-        <MinVersion>0</MinVersion>
+        <Name>(1) Community Patch</Name>
+        <Id>d1b6328c-ff44-4b0d-aad7-c657f83610cd</Id>
+        <MinVersion>142</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
     </ModReferences>
@@ -56,6 +56,11 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
     <ReloadUnitSystem>true</ReloadUnitSystem>
     <ReloadAudioSystem>true</ReloadAudioSystem>
     <ModActions>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Gameplay/SQL/CPCompatible.sql</FileName>
+      </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
@@ -531,20 +536,13 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       </Association>
       <Association>
         <Type>Mod</Type>
-        <Name>(1)CIV5MPDLL</Name>
-        <Id>a2969a0a-e4da-41cc-9e0b-19b29aa971d8</Id>
-        <MinVersion>54</MinVersion>
+        <Name>(1) Community Patch</Name>
+        <Id>d1b6328c-ff44-4b0d-aad7-c657f83610cd</Id>
+        <MinVersion>145</MinVersion>
         <MaxVersion>999</MaxVersion>
       </Association>
     </ModDependencies>
     <ModBlockers>
-      <Association xmlns="">
-        <Type>Mod</Type>
-        <Name>VMC</Name>
-        <Id>d1b6328c-ff44-4b0d-aad7-c657f83610cd</Id>
-        <MinVersion>0</MinVersion>
-        <MaxVersion>999</MaxVersion>
-      </Association>
     </ModBlockers>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
@@ -730,6 +728,10 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Gameplay/SQL/DeletionFixinator.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Gameplay/SQL/CPCompatible.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
@@ -5090,10 +5092,6 @@ Some Imgaes and Visual Elements are from the game: ACE Combat (published by Namc
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="UI/InGame/Popups/NewEraPopup.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="UI/InGame/Popups/ProductionPopup.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>

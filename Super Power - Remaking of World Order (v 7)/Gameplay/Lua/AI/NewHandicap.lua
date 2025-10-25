@@ -541,20 +541,10 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
 
     local ThisUnitClass = unit:GetUnitClassType()
 
-    local NumMaxUnits = (player:GetNumCities()) * 25
-    if NumMaxUnits > 1000 then
-        NumMaxUnits = 1000
-    end
-
-    if unit:IsCombatUnit() and player:GetNumUnits() > NumMaxUnits then
-        unit:Kill()
-        print("AI has too many this units!")
-        return
-    end
-
     if unit:IsHasPromotion(MilitiaUnitID) and not PlayerAtWarWithHuman(player) then
         if player:GetUnitClassCount(ThisUnitClass) > AICityCount / 5 then
-            unit:Kill()
+            unit:SetExperience(0)
+            unit:Kill(true)
             print("Reduce AI Militia units' number when not at war with Human to let the turn goes faster!")
         end
     end
@@ -766,7 +756,8 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
             end
 
             if iUnitClassCount > 5 and iUnitClassCount > AICityCount * 2 and not PlayerAtWarWithHuman(player) then
-                unit:Kill()
+                unit:SetExperience(0)
+                unit:Kill(true)
                 print("AI has too many this type of land units! So remove it!")
             end
         end
@@ -774,13 +765,15 @@ function AIPromotion(iPlayer, iCity, iUnit, bGold, bFaith)
 
     if unit:IsHasPromotion(MilitiaUnitID) then
         if player:GetUnitClassCount(ThisUnitClass) > AICityCount * 3 then
-            unit:Kill()
+            unit:SetExperience(0)
+            unit:Kill(true)
         end
     end
 
     if unit:IsHasPromotion(RangedUnitID) or unit:IsHasPromotion(CitySiegeID) then
         if player:GetUnitClassCount(ThisUnitClass) > AICityCount * 4 then
-            unit:Kill()
+            unit:SetExperience(0)
+            unit:Kill(true)
         end
     end
 end
@@ -974,6 +967,7 @@ function MinorLimitUnits(iPlayer, iUnit)
     end
 
     if unit:IsCombatUnit() and unit:GetUnitCombatType() == GameInfoTypes.UNITCOMBAT_RECON and player:GetNumMilitaryUnits() > 5 * player:GetNumCities() then
+        unit:SetExperience(0)
         unit:Kill(true);
         print("Minor Civ removed too many militia units!");
     end

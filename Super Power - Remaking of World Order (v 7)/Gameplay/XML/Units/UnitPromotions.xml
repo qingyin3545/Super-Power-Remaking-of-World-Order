@@ -116,7 +116,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_FAST_SET_UP</PediaEntry>
 			<CannotBeChosen>true</CannotBeChosen>
-			<SetUpCostModifier>-100</SetUpCostModifier>
+			<NumSlowInEnemyLandCount>-999</NumSlowInEnemyLandCount>
 		</Row>
 		
 		<!--*****************************Heroic Carrier*******************************************-->
@@ -251,7 +251,7 @@
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_HUSSAR</PediaEntry>
 			<FightWellDamaged>true</FightWellDamaged>
-			<CurrentHitPointAttackMod>1</CurrentHitPointAttackMod>
+			<LostHitPointAttackMod>1</LostHitPointAttackMod>
 		</Row>
 
 		<Row>
@@ -2160,8 +2160,7 @@
 			<NoDefensiveBonus>true</NoDefensiveBonus>
 			<LostWithUpgrade>true</LostWithUpgrade>
 			<OpenRangedAttackMod>25</OpenRangedAttackMod>
-			<HeightModPerX>25</HeightModPerX>
-			<HeightModLimited>2</HeightModLimited>
+			<HeightAdvantageAttckMod>25</HeightAdvantageAttckMod>
 		</Row>
 
 		<Row>
@@ -4135,7 +4134,7 @@
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AIRRECON_1</PediaEntry>
 			<MovesChange>1</MovesChange>
-			<GetGroundAttackRange>1</GetGroundAttackRange>
+			<GroundAttackRange>1</GroundAttackRange>
 		</Row>
 		<Row>
 			<Type>PROMOTION_AIRRECON_2</Type>
@@ -4149,7 +4148,7 @@
 			<PediaType>PEDIA_AIR</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_AIRRECON_2</PediaEntry>
 			<MovesChange>1</MovesChange>
-			<GetGroundAttackRange>1</GetGroundAttackRange>
+			<GroundAttackRange>1</GroundAttackRange>
 		</Row>
 		
 	</UnitPromotions>
@@ -5396,7 +5395,7 @@
 			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_GAIN_EXPERIENCE</PediaEntry>
-			<MultipleInitExperence>100</MultipleInitExperence>
+			<MultipleInitExperience>100</MultipleInitExperience>
 		</Row>
 
 		<Row>
@@ -5536,7 +5535,7 @@
 			<IconAtlas>SP10_PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_ATTRIBUTES</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SPN_MAMLUK_COMBAT_FAITH</PediaEntry>
-			<UnitAttackFaithBonus>100</UnitAttackFaithBonus>
+			<DamageUnitFaithBonus>100</DamageUnitFaithBonus>
 		</Row>
 
 
@@ -5695,7 +5694,7 @@
 			<Help>TXT_KEY_PROMOTION_LES_GUEUX_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<CityAttack>50</CityAttack>
-			<MeleeAttackModifier>150</MeleeAttackModifier>
+			<MeleeAttackMod>150</MeleeAttackMod>
 			<CityAttackPlunderModifier>200</CityAttackPlunderModifier>
 			<FreePillageMoves>true</FreePillageMoves>
 			<PillageReplenishHealth>15</PillageReplenishHealth>

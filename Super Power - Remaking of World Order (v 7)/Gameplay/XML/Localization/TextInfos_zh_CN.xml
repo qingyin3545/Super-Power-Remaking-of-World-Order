@@ -16,7 +16,7 @@
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]版本号 10 Final[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]版本号 11[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
@@ -6160,10 +6160,9 @@
 
 		<Replace Tag="TXT_KEY_TRAIT_GREAT_ANDEAN_ROAD">
 			<Text>
-				[ICON_BULLET]单位进入丘陵地块不消耗额外移动力，工人可以铲除丘陵地块上的[ICON_RES_SHEEP]羊。
-				[NEWLINE][ICON_BULLET]丘陵上的设施不需要维护费，其他地形上的设施维护费减半。
-				[NEWLINE][ICON_BULLET]平民单位可以进入山脉地块。移民在山脉地块不会额外损耗，允许建立山脉城市。
-				[NEWLINE][ICON_BULLET]山脉城市获得额外的[ICON_RESEARCH]科研和[ICON_FOOD]食物产出，随时代加成。
+				[ICON_BULLET]单位可以进入山脉地块，且进入丘陵、山脉地块不消耗额外移动力。
+				[NEWLINE][ICON_BULLET]丘陵上的设施不需要维护费，工人可以铲除丘陵地块上的[ICON_RES_SHEEP]羊。
+				[NEWLINE][ICON_BULLET]允许在山脉地块建立城市，山脉城市获得额外的[ICON_RESEARCH]科研和[ICON_FOOD]食物产出，随时代加成。
 			</Text>
 		</Replace>
 
@@ -6630,7 +6629,7 @@
 				[COLOR_POSITIVE_TEXT]贵族政治[ENDCOLOR]
 				[NEWLINE][ICON_BULLET]新建城市+1[ICON_CITIZEN]人口(但是每1个移民仍等于1人口)。
 				[NEWLINE][ICON_BULLET]小镇（即6人口以下的城市）新增人口时会保留100%的余粮（在增长下一个人口后生效）。
-				[NEWLINE][ICON_BULLET]所有城市的[ICON_FOOD]食物积累值、余粮积累值立即充满。
+				[NEWLINE][ICON_BULLET]所有城市的[ICON_FOOD]食物积累值立即充满。
 			</Text>
 		</Replace>
 
@@ -7385,7 +7384,7 @@
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_OPEN_SOCIETY_HELP">
-			<Text>[COLOR_POSITIVE_TEXT]前卫艺术[ENDCOLOR][NEWLINE]获得[ICON_GREAT_PEOPLE]伟人的速度加快25%，当有新伟人诞生时，全国永久+3%[ICON_TOURISM]魅力。</Text>
+			<Text>[COLOR_POSITIVE_TEXT]前卫艺术[ENDCOLOR][NEWLINE]获得[ICON_GREAT_PEOPLE]伟人的速度加快25%，当有伟人诞生时，对所有文明+300[ICON_TOURISM]魅力。</Text>
 		</Replace>
 
 		<Replace Tag="TXT_KEY_POLICY_CREATIVE_EXPRESSION_HELP">
@@ -15891,7 +15890,7 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_FAST_SET_UP_HELP">
 			<Text>
-				[ICON_BULLET]架设不消耗移动力。
+				[ICON_BULLET]在敌方境内不额外消耗[ICON_MOVES]移动力。
 			</Text>
 		</Replace>
 
@@ -15993,9 +15992,9 @@
 		<Row Tag="TXT_KEY_DO_RESEARCH_AGREEMENT_WITH">
 			<Text>[COLOR_POSITIVE_TEXT]合作研究-{1_CivName:textkey}[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GOODY_SCIENCE">
+		<Replace Tag="TXT_KEY_GOODY_SCIENCE">
 			<Text>你发现了大量先进的工具！</Text>
-		</Row>
+		</Replace>
 		<Row Tag="TXT_KEY_GOODY_CHOOSE_SCIENCE">
 			<Text>研究他们的工具，获得[ICON_RESEARCH]科研值</Text>
 		</Row>
@@ -16828,6 +16827,13 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_FOODMOD_WLTKD">
 			<Text>[NEWLINE][ICON_BULLET]我们爱领袖日修正（余粮）: {1_Num}%</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_MUST_SET_UP">
+			<Text>在敌方境内额外消耗1[ICON_MOVES]移动力</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_PROMOTION_MUST_SET_UP">
+			<Text>在敌方境内额外消耗1[ICON_MOVES]移动力</Text>
 		</Replace>
 	</Language_zh_CN>
 </GameData>

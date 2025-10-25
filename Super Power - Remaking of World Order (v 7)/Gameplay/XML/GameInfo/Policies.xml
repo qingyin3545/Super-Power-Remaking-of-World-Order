@@ -15,7 +15,7 @@
 			<Where Type="POLICY_TRADITION"/>
 		</Update>
 		<Update>
-			<Set HappinessPerXPopulation="0" WonderProductionModifier="0" NewCityExtraPopulation="1" InstantFoodThresholdPercent="100" InstantFoodKeptPercent="100" PortraitIndex="28"/>
+			<Set HappinessPerXPopulation="0" WonderProductionModifier="0" NewCityExtraPopulation="1" InstantFoodThresholdPercent="100" PortraitIndex="28"/>
 			<Where Type="POLICY_ARISTOCRACY"/>
 		</Update>
 		<Update>
@@ -65,7 +65,7 @@
 			<PortraitIndex>47</PortraitIndex>
 			<IconAtlas>POLICY_ATLAS</IconAtlas>
 			<IconAtlasAchieved>POLICY_A_ATLAS</IconAtlasAchieved>
-			<FreeBuildingClass>BUILDINGCLASS_FAMILY_PRODUCTION</FreeBuildingClass>
+			<AllCityFreeBuilding>BUILDINGCLASS_FAMILY_PRODUCTION</AllCityFreeBuilding>
 		</Row>
 		<Row>
 			<Type>POLICY_CENTRALISATION</Type>
@@ -97,7 +97,7 @@
 			<Where Type="POLICY_CITIZENSHIP"/>
 		</Update>
 		<Update>
-			<Set CapitalSettlerProductionModifier="0" SettlerProductionModifier="50" SettlerProductionEraModifier="50" SettlerProductionStartEra="ERA_RENAISSANCE" GridX="1"  GridY="1"/>
+			<Set CapitalSettlerProductionModifier="0" SettlerProductionModifier="50" GridX="1"  GridY="1"/>
 			<Where Type="POLICY_COLLECTIVE_RULE"/>
 		</Update>
 		<Update>
@@ -220,7 +220,7 @@
 			<Where Type="POLICY_MANDATE_OF_HEAVEN"/>
 		</Update>
 		<Update>
-			<Set FreeBuildingClass="BUILDINGCLASS_THEOCRACY_WRITER"/>
+			<Set AllCityFreeBuilding="BUILDINGCLASS_THEOCRACY_WRITER"/>
 			<Where Type="POLICY_THEOCRACY"/>
 		</Update>
 		<Update>
@@ -275,7 +275,7 @@
 			<Where Type="POLICY_CULTURAL_DIPLOMACY"/>
 		</Update>
 		<Update>
-			<Set CityStateTradeChange="0" ProtectedMinorPerTurnInfluence="400" NumTradeRouteBonus="1" GridX="5" GridY="1" PortraitIndex="17"/>
+			<Set CityStateTradeChange="0" ProtectedMinorPerTurnInfluence="400" FreeTradeRoute="1" GridX="5" GridY="1" PortraitIndex="17"/>
 			<Where Type="POLICY_MERCHANT_CONFEDERACY"/>
 		</Update>
 
@@ -313,7 +313,7 @@
 			<Where Type="POLICY_FINE_ARTS"/>
 		</Update>
 		<Update>
-			<Set PolicyCostModifier="-15" CultureWonderMultiplier="0" GoldenAgeTurns="0" HappinessPerPolicy="50" GridX="3"/>
+			<Set PolicyCostModifier="-15" CultureWonderMultiplier="0" GoldenAgeTurns="0" HappinessPerXPolicies="2" GridX="3"/>
 			<Where Type="POLICY_FLOURISHING_OF_ARTS"/>
 		</Update>
 		<Update>
@@ -352,7 +352,7 @@
 	<!--******************Commerce******************* -->
 	<Policies>
 		<Update>
-			<Set NumTradeRouteBonus="1"/>
+			<Set FreeTradeRoute="1"/>
 			<Where Type="POLICY_COMMERCE"/>
 		</Update>
 		<Update>
@@ -410,7 +410,7 @@
 			<Where Type="POLICY_MARITIME_INFRASTRUCTURE"/>
 		</Update>
 		<Update>
-			<Set SeaTradeRouteGoldChange="600" PortraitIndex="8" NumTradeRouteBonus="1" IconAtlas="POLICY_ATLAS_EXP2" IconAtlasAchieved="POLICY_A_ATLAS_EXP2" GridX="3" GridY="1"/>
+			<Set SeaTradeRouteGoldChange="600" PortraitIndex="8" FreeTradeRoute="1" IconAtlas="POLICY_ATLAS_EXP2" IconAtlasAchieved="POLICY_A_ATLAS_EXP2" GridX="3" GridY="1"/>
 			<Where Type="POLICY_MERCHANT_NAVY"/>
 		</Update>
 		<Update>
@@ -528,12 +528,12 @@
 		
 		<!--Freedom-->
 		<Update>
-			<Set RiggingElectionModifier="150" RiggingElectionInfluenceModifier="100" SpyLevelUpWhenRigging="true"/>
+			<Set RiggingElectionModifier="150" RigElectionInfluenceModifier="100" SpyLevelUpWhenRigging="true"/>
 			<Where Type="POLICY_COVERT_ACTION"/>
 		</Update>
 		
 		<Update>
-			<Set GreatPeopleRateModifier="25" TourismModifierPerGPCreation="3"/>
+			<Set GreatPeopleRateModifier="25"/>
 			<Where Type="POLICY_OPEN_SOCIETY"/>
 		</Update>
 		<Update>
@@ -655,7 +655,7 @@
 			<Where Type="POLICY_NEW_ORDER"/>
 		</Update>
 		<Update>
-			<Set StealTechFasterModifier="100" ExtraSpies="1"/>
+			<Set StealTechFasterModifier="100" FreeSpy="1"/>
 			<Where Type="POLICY_INDUSTRIAL_ESPIONAGE"/>
 		</Update>
 	</Policies>

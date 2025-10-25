@@ -70,8 +70,18 @@ function GatherInfoAboutUniqueStuff( civType )
 end
 
 
-function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButtons, textureSize )
+function AddSmallButtonsToTechButton( thisTechButtonInstance, tech, maxSmallButtons, textureSize, ePlayerOverride)
 	-- This has a few assumptions, the main one being that the small buttons are named "B1", "B2", "B3"... and that GatherInfoAboutUniqueStuff() has been called before this
+	local ePlayer = ePlayerOverride or Game.GetActivePlayer();
+	local pPlayer = Players[ePlayer];
+	local strCivType;
+	if pPlayer then
+		strCivType = GameInfo.Civilizations[pPlayer:GetCivilizationType()].Type
+	end
+	if validUnitBuilds == nil and validBuildingBuilds == nil and validImprovementBuilds == nil
+	and strCivType then
+		GatherInfoAboutUniqueStuff(strCivType)
+	end
 
 	-- first, hide the ones we aren't using
 	for buttonNum = 1, maxSmallButtons, 1 do
