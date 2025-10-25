@@ -16,7 +16,7 @@
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]Version 10 Final[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]Version 11[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
@@ -17528,9 +17528,9 @@
 		<Row Tag="TXT_KEY_DO_RESEARCH_AGREEMENT_WITH">
 			<Text>[COLOR_POSITIVE_TEXT]Research Agreement - {1_CivName:textkey}[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GOODY_SCIENCE">
+		<Replace Tag="TXT_KEY_GOODY_SCIENCE">
 			<Text>You find a lot of advanced tools! Get {1_Num} [ICON_RESEARCH] Science!</Text>
-		</Row>
+		</Replace>
 		<Row Tag="TXT_KEY_GOODY_CHOOSE_SCIENCE">
 			<Text>Study their tools to get [ICON_RESEARCH] Science.</Text>
 		</Row>
@@ -18358,6 +18358,13 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_FOODMOD_WLTKD">
 			<Text>[NEWLINE][ICON_BULLET]We Love the King Day Modifier (Difference): {1_Num}%</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_MUST_SET_UP">
+			<Text>[ICON_MOVES] Movement cost in enemy territory increases by +1</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_PROMOTION_MUST_SET_UP">
+			<Text>[ICON_MOVES] Movement cost in enemy territory increases by +1</Text>
 		</Replace>
 	</Language_en_US>
 </GameData>

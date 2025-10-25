@@ -3,9 +3,6 @@ entry point for most of the mod. The contexts below are loaded after all the con
 InGame.xml.]]
 
 -- InGame New Effect
-
--- DLL-VMC -- STFU
-include("Stfu")
 include("DllVersionCheck");
 
 -- SP - All

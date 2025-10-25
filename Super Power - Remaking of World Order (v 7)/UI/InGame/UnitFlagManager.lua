@@ -17,6 +17,7 @@ local g_ListPlot;
 local g_PrintDebug = false;
 local g_GarrisonedUnitFlagsInStrategicView = true;
 local g_DeleteALLStrategicUnitFlag = GameInfo.SPNewEffectControler.SP_DELETE_ALL_STRATEGIC_UNIT_FLAG.Enabled
+local g_PromotionSiegeID = GameInfoTypes.PROMOTION_CITY_SIEGE
 
 local g_UnitList = {};
 ContextPtr:BuildInstanceForControl("UnitList", g_UnitList, Controls.CityContainer);
@@ -488,7 +489,7 @@ local g_UnitFlagClass         =
             maskName = "UnitFlagGarrisonMask.dds";
             self.m_Instance.UnitIconShadow:SetOffsetVal( -1, 1);
             -- SP Ranged Units
-        elseif (pUnit:IsSetUpForRangedAttack()) then
+        elseif (pUnit:IsHasPromotion(g_PromotionSiegeID)) then
             textureName = "UnitFlagRanged.dds";
             maskName = "UnitFlagRangedMask.dds";
             self.m_Instance.UnitIconShadow:SetOffsetVal(0, 0);
@@ -1596,9 +1597,6 @@ function OnDimEvent(playerID, unitID, bDim)
             if (active_team == team) then
                 -- print( "  Unit dim: " .. tostring( playerID ) .. " " .. tostring( unitID ) .. " " .. iDim );
                 flag:SetDim(bDim);
-            end
-            if pUnit:IsMustSetUpToRangedAttack() then
-                flag:UpdateFlagType();
             end
             if (flag.m_SPUnitType == 1 and not pUnit:IsImmobile())
             or (pUnit:IsImmobile() and flag.m_SPUnitType ~= 1)

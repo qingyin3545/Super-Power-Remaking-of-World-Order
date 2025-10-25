@@ -16,7 +16,7 @@
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_SP_VERSION">
-			<Text>[COLOR_YELLOW]版本号 10 Final[ENDCOLOR]</Text>
+			<Text>[COLOR_YELLOW]版本号 11[ENDCOLOR]</Text>
 		</Row>
 
 		<Row Tag="TXT_KEY_SP_MOD_SETUP">
@@ -15984,9 +15984,9 @@
 		<Row Tag="TXT_KEY_DO_RESEARCH_AGREEMENT_WITH">
 			<Text>[COLOR_POSITIVE_TEXT]合作研究-{1_CivName:textkey}[ENDCOLOR]</Text>
 		</Row>
-		<Row Tag="TXT_KEY_GOODY_SCIENCE">
+		<Replace Tag="TXT_KEY_GOODY_SCIENCE">
 			<Text>你发现了大量先进的工具！</Text>
-		</Row>
+		</Replace>
 		<Row Tag="TXT_KEY_GOODY_CHOOSE_SCIENCE">
 			<Text>研究他们的工具，获得[ICON_RESEARCH]科研值</Text>
 		</Row>
@@ -16816,6 +16816,13 @@
 		</Replace>
 		<Replace Tag="TXT_KEY_FOODMOD_WLTKD">
 			<Text>[NEWLINE][ICON_BULLET]我们爱领袖日修正（余粮）: {1_Num}%</Text>
+		</Replace>
+
+		<Replace Tag="TXT_KEY_PROMOTION_MUST_SET_UP">
+			<Text>在敌方境内额外消耗1[ICON_MOVES]移动力</Text>
+		</Replace>
+		<Replace Tag="TXT_KEY_PEDIA_PROMOTION_MUST_SET_UP">
+			<Text>在敌方境内额外消耗1[ICON_MOVES]移动力</Text>
 		</Replace>
 	</Language_zh_CN>
 </GameData>

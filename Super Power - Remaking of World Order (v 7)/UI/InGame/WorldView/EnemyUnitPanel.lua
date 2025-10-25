@@ -593,9 +593,9 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 		  	end
 
 			--Residual Movement Bonus
-			iModifier = pMyUnit:MoveLfetAttackMod();
+			iModifier = pMyUnit:MoveLeftAttackMod();
 			if (iModifier ~= 0 and pMyUnit:MovesLeft()>0) then
-			    iModifier = pMyUnit:MoveLfetAttackMod()* pMyUnit:MovesLeft() / GameDefines["MOVE_DENOMINATOR"]
+			    iModifier = pMyUnit:MoveLeftAttackMod()* pMyUnit:MovesLeft() / GameDefines["MOVE_DENOMINATOR"]
 				controlTable = g_MyCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_MOVES_LEFT_BONUS_SP");
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
@@ -630,13 +630,13 @@ function UpdateCombatOddsUnitVsCity(pMyUnit, pCity)
 			end
 				
 			--Current HitPoint Bonus
-			iModifier = pMyUnit:GetCurrentHitPointAttackMod();
+			iModifier = pMyUnit:GetLostHitPointAttackMod();
 			local Hitbonus = pMyUnit:GetMaxHitPoints()-pMyUnit:GetCurrHitPoints()
 			if pMyUnit:GetMaxHitPoints()-pMyUnit:GetCurrHitPoints()>100 then
 				Hitbonus =100
 			end
 			if (iModifier ~= 0 and Hitbonus~=0 ) then
-			    iModifier =pMyUnit:GetCurrentHitPointAttackMod()*Hitbonus	
+			    iModifier =pMyUnit:GetLostHitPointAttackMod()*Hitbonus	
 				controlTable = g_MyCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_LEFT_HITPOINT_BONUS_SP");
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,true, true) );
@@ -1616,9 +1616,9 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 		  	end
 
 			--Residual Movement Bonus
-			iModifier = pMyUnit:MoveLfetAttackMod();
+			iModifier = pMyUnit:MoveLeftAttackMod();
 			if (iModifier ~= 0 and pMyUnit:MovesLeft()>0) then
-				iModifier = pMyUnit:MoveLfetAttackMod()* pMyUnit:MovesLeft() / GameDefines["MOVE_DENOMINATOR"]
+				iModifier = pMyUnit:MoveLeftAttackMod()* pMyUnit:MovesLeft() / GameDefines["MOVE_DENOMINATOR"]
 				controlTable = g_MyCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_MOVES_LEFT_BONUS_SP");
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier, true, true) );
@@ -1653,13 +1653,13 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
 			end
 							
 			--Current HitPoint Bonus
-			iModifier = pMyUnit:GetCurrentHitPointAttackMod();
+			iModifier = pMyUnit:GetLostHitPointAttackMod();
 			local Hitbonus = pMyUnit:GetMaxHitPoints()-pMyUnit:GetCurrHitPoints()
 			if pMyUnit:GetMaxHitPoints()-pMyUnit:GetCurrHitPoints()>100 then
 				Hitbonus =100
 			end
 			if (iModifier ~= 0 and Hitbonus~=0 ) then
-				iModifier =pMyUnit:GetCurrentHitPointAttackMod()*Hitbonus	
+				iModifier =pMyUnit:GetLostHitPointAttackMod()*Hitbonus	
 				controlTable = g_MyCombatDataIM:GetInstance();		
 				controlTable.Text:LocalizeAndSetText( "TXT_KEY_EUPANEL_LEFT_HITPOINT_BONUS_SP");
 				controlTable.Value:SetText( GetFormattedText(strText, iModifier,true, true) );
@@ -2099,13 +2099,13 @@ function UpdateCombatOddsUnitVsUnit(pMyUnit, pTheirUnit)
                 end
 
 				--Current HitPoint Bonus
-                iModifier = pTheirUnit:GetCurrentHitPointDefenseMod();
+                iModifier = pTheirUnit:GetLostHitPointDefenseMod();
                 local Hitbonus = pTheirUnit:GetMaxHitPoints() - pTheirUnit:GetCurrHitPoints()
                 if pTheirUnit:GetMaxHitPoints() - pTheirUnit:GetCurrHitPoints() > 100 then
                     Hitbonus = 100
                 end
                 if (iModifier ~= 0 and Hitbonus ~= 0) then
-                    iModifier = pTheirUnit:GetCurrentHitPointDefenseMod() * Hitbonus
+                    iModifier = pTheirUnit:GetLostHitPointDefenseMod() * Hitbonus
                     controlTable = g_TheirCombatDataIM:GetInstance();
                     controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_LEFT_HITPOINT_BONUS_SP");
                     controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));
@@ -2734,13 +2734,13 @@ function UpdateCombatOddsCityVsUnit(myCity, theirUnit)
 		end
 
 		--Current HitPoint Bonus
-		iModifier = theirUnit:GetCurrentHitPointDefenseMod();
+		iModifier = theirUnit:GetLostHitPointDefenseMod();
 		local Hitbonus = theirUnit:GetMaxHitPoints() - theirUnit:GetCurrHitPoints()
 		if theirUnit:GetMaxHitPoints() - theirUnit:GetCurrHitPoints() > 100 then
 			Hitbonus = 100
 		end
 		if (iModifier ~= 0 and Hitbonus ~= 0) then
-			iModifier = theirUnit:GetCurrentHitPointDefenseMod() * Hitbonus
+			iModifier = theirUnit:GetLostHitPointDefenseMod() * Hitbonus
 			controlTable = g_TheirCombatDataIM:GetInstance();
 			controlTable.Text:LocalizeAndSetText("TXT_KEY_EUPANEL_LEFT_HITPOINT_BONUS_SP");
 			controlTable.Value:SetText(GetFormattedText(strText, iModifier, false, true));

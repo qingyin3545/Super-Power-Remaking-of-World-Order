@@ -3928,7 +3928,7 @@ if Game then
 				end
 
 				-- Military Promise
-				local iMilitaryPromiseTurnLeft = Players[playerID]:GetMilitaryPromiseTurnLeft(activePlayerID)
+				local iMilitaryPromiseTurnLeft = Players[playerID]:GetNumTurnsMilitaryPromise(activePlayerID)
 				if iMilitaryPromiseTurnLeft >= 0 then
 					insert( treaties, negativeOrPositiveTextColor[false] .. "[ICON_CITY_STATE]"
 							.. L"TXT_KEY_MILITARY_PROMISE"
