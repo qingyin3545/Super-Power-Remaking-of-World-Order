@@ -749,6 +749,22 @@
 			<IconAtlas>SPBuildings_ATLAS</IconAtlas>
 			<PortraitIndex>37</PortraitIndex>
 		</Row>
+		<Row>
+			<Type>BUILDING_ELECTRICITY_TO_ALUMINUM</Type>
+			<BuildingClass>BUILDINGCLASS_ELECTRICITY_TO_ALUMINUM</BuildingClass>
+			<Cost>850</Cost>
+			<GoldMaintenance>6</GoldMaintenance>
+			<PrereqTech>TECH_AUTOMATION_T</PrereqTech>
+			<Description>TXT_KEY_BUILDING_ELECTRICITY_TO_ALUMINUM</Description>
+			<Civilopedia>TXT_KEY_CIV5_BUILDING_ELECTRICITY_TO_ALUMINUM_TEXT</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_SP_CITY_BASIC_BUILDINGS_STRATEGY</Strategy>
+			<Help>TXT_KEY_BUILDING_ELECTRICITY_TO_ALUMINUM_HELP</Help>
+			<MinAreaSize>-1</MinAreaSize>
+			<NeverCapture>true</NeverCapture>
+			<HurryCostModifier>75</HurryCostModifier>
+			<IconAtlas>SP10_EXTRA_ATLAS</IconAtlas>
+			<PortraitIndex>15</PortraitIndex>
+		</Row>
 
 
 		<Row>

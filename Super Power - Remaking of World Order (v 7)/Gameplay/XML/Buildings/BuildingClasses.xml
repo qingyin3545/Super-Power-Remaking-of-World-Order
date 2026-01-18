@@ -805,6 +805,11 @@
 			<DefaultBuilding>BUILDING_COAL_TO_URANIUM</DefaultBuilding>
 			<Description>TXT_KEY_BUILDING_COAL_TO_URANIUM</Description>
 		</Row>
+		<Row>
+			<Type>BUILDINGCLASS_ELECTRICITY_TO_ALUMINUM</Type>
+			<DefaultBuilding>BUILDING_ELECTRICITY_TO_ALUMINUM</DefaultBuilding>
+			<Description>TXT_KEY_BUILDING_ELECTRICITY_TO_ALUMINUM</Description>
+		</Row>
 
 		<Row>
 			<Type>BUILDINGCLASS_BEVERAGE_FACTORY</Type>

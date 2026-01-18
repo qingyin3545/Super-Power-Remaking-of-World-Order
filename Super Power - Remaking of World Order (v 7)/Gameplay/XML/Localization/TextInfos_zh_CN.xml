@@ -726,6 +726,27 @@
 			<Text>将10单位[ICON_RES_COAL]煤资源转化为4单位[ICON_RES_URANIUM]铀资源。[NEWLINE][NEWLINE]城市必须先拥有工厂。[NEWLINE][NEWLINE]需要4单位[ICON_RES_ELECTRICITY]电力。</Text>
 		</Row>
 
+		<Row>
+			<Tag>TXT_KEY_BUILDING_ELECTRICITY_TO_ALUMINUM</Tag>
+			<Text>[ICON_PRODUCTION][ICON_RES_ALUMINUM]智能电解工厂</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_CIV5_BUILDING_ELECTRICITY_TO_ALUMINUM_TEXT</Tag>
+			<Text>
+				智能电解工厂代表了电化学工业自动化进程的顶峰。其通过集成高度自动化的计算机过程控制系统、传感器网络和机器人操作单元，实现了对复杂电解过程的精确管控。该系统能根据实时数据自动调整电解槽的电压、温度与物料平衡，将单位能耗降至极限，并稳定产出高纯度金属。其自动化物流和闭环控制系统大幅减少了人工干预与排放，是依托先进自动化技术将能源高效转化为战略资源的关键设施。
+			</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_BUILDING_ELECTRICITY_TO_ALUMINUM_HELP</Tag>
+			<Text>
+				提供5单位的[ICON_RES_ALUMINUM]铝资源。
+				[NEWLINE]本城市的每处[ICON_RES_GOLD]黄金、[ICON_RES_SILVER]白银、[ICON_RES_COPPER]赤铜和[ICON_RES_ALUMINUM]铝+1[ICON_PRODUCTION]产能。
+				[NEWLINE][NEWLINE]城市必须先拥有工厂。
+				[NEWLINE][NEWLINE]需要5单位[ICON_RES_ELECTRICITY]电力。
+			</Text>
+		</Row>
+		
+
 		<Replace Tag="TXT_KEY_BUILDING_SPACESHIP_FACTORY_HELP">
 			<Text>允许你在本城市建造[COLOR_POSITIVE_TEXT]飞船组件[ENDCOLOR] 和[COLOR_POSITIVE_TEXT]太空轨道单位[ENDCOLOR]。[NEWLINE][NEWLINE]需要3单位[ICON_RES_ELECTRICITY]电力。[NEWLINE][NEWLINE]城市必须先拥有工厂。</Text>
 		</Replace>
