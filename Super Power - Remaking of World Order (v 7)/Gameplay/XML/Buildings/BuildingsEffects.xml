@@ -523,6 +523,11 @@
 			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
 			<Cost>4</Cost>
 		</Row>
+		<Row>
+			<BuildingType>BUILDING_ELECTRICITY_TO_ALUMINUM</BuildingType>
+			<ResourceType>RESOURCE_ELECTRICITY</ResourceType>
+			<Cost>5</Cost>
+		</Row>
 
 
 		<Row>
@@ -630,7 +635,11 @@
 			<ResourceType>RESOURCE_URANIUM</ResourceType>
 			<Quantity>4</Quantity>
 		</Row>
-
+		<Row>
+			<BuildingType>BUILDING_ELECTRICITY_TO_ALUMINUM</BuildingType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<Quantity>5</Quantity>
+		</Row>
 
 
 		<Row>
@@ -2660,6 +2669,30 @@
 			<Yield>3</Yield>
 		</Row>
 	
+		<Row>
+			<BuildingType>BUILDING_ELECTRICITY_TO_ALUMINUM</BuildingType>
+			<ResourceType>RESOURCE_ALUMINUM</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ELECTRICITY_TO_ALUMINUM</BuildingType>
+			<ResourceType>RESOURCE_GOLD</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ELECTRICITY_TO_ALUMINUM</BuildingType>
+			<ResourceType>RESOURCE_SILVER</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ELECTRICITY_TO_ALUMINUM</BuildingType>
+			<ResourceType>RESOURCE_COPPER</ResourceType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<Yield>1</Yield>
+		</Row>
 				
 		
 		<Row>
@@ -7439,6 +7472,21 @@
 			<BuildingType>BUILDING_COAL_TO_URANIUM</BuildingType>
 			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
 			<Flavor>180</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ELECTRICITY_TO_ALUMINUM</BuildingType>
+			<FlavorType>FLAVOR_MILITARY_TRAINING</FlavorType>
+			<Flavor>80</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ELECTRICITY_TO_ALUMINUM</BuildingType>
+			<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+			<Flavor>40</Flavor>
+		</Row>
+		<Row>
+			<BuildingType>BUILDING_ELECTRICITY_TO_ALUMINUM</BuildingType>
+			<FlavorType>FLAVOR_SPACESHIP</FlavorType>
+			<Flavor>40</Flavor>
 		</Row>
 	</Building_Flavors>
 

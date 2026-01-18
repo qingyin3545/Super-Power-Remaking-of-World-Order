@@ -3138,6 +3138,26 @@
 			[NEWLINE][NEWLINE]Requires 4 [ICON_RES_ELECTRICITY] Electricity and 10 [ICON_RES_COAL] Coal.</Text>
 		</Row>
 
+		<Row>
+			<Tag>TXT_KEY_BUILDING_ELECTRICITY_TO_ALUMINUM</Tag>
+			<Text>[ICON_PRODUCTION][ICON_RES_ALUMINUM] Smart Electrolysis Plant</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_CIV5_BUILDING_ELECTRICITY_TO_ALUMINUM_TEXT</Tag>
+			<Text>
+				The Smart Electrolysis Plant represents the pinnacle of automation in the electrochemical industry. By integrating highly automated computer process control systems, sensor networks, and robotic operation units, it achieves precise management of complex electrolysis processes. The system can automatically adjust cell voltage, temperature, and material balance based on real-time data, reducing energy consumption per unit to the theoretical limit while consistently producing high-purity metals. Its automated logistics and closed-loop control systems significantly reduce manual intervention and emissions, making it a key facility that leverages advanced automation technology to efficiently convert energy into strategic resources.
+			</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_BUILDING_ELECTRICITY_TO_ALUMINUM_HELP</Tag>
+			<Text>
+				+5 additional [ICON_RES_ALUMINUM] Aluminum.
+				[NEWLINE]+1 [ICON_PRODUCTION] Production for each source of [ICON_RES_GOLD] Gold, [ICON_RES_SILVER] Silver, [ICON_RES_COPPER] Copper and [ICON_RES_ALUMINUM] Aluminum.
+				[NEWLINE][NEWLINE]City must have a Factory.
+				[NEWLINE][NEWLINE]Requires 5 [ICON_RES_ELECTRICITY] Electricity.
+			</Text>
+		</Row>
+
 		<Replace Tag="TXT_KEY_BUILDING_SPACESHIP_FACTORY_HELP">
 			<Text>Allows you to build [COLOR_POSITIVE_TEXT]Spacship Parts[ENDCOLOR] and [COLOR_POSITIVE_TEXT]Satellite Units[ENDCOLOR]in this city.[NEWLINE][NEWLINE]Requires 3 [ICON_RES_ELECTRICITY] Electricity. [NEWLINE][NEWLINE]City must have a factory.</Text>
 		</Replace>

@@ -705,6 +705,26 @@
 			<Text>將10單位[ICON_RES_COAL]煤資源轉化為4單位[ICON_RES_URANIUM]鈾資源。[NEWLINE][NEWLINE]城市必須先擁有工廠。[NEWLINE][NEWLINE]需要4單位[ICON_RES_ELECTRICITY]電力。</Text>
 		</Row>
 
+		<Row>
+			<Tag>TXT_KEY_BUILDING_ELECTRICITY_TO_ALUMINUM</Tag>
+			<Text>[ICON_PRODUCTION][ICON_RES_ALUMINUM]智能電解工廠</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_CIV5_BUILDING_ELECTRICITY_TO_ALUMINUM_TEXT</Tag>
+			<Text>
+				智能電解工廠代表了電化學工業自動化進程的頂峰。其通過集成高度自動化的計算機過程控制系統、傳感器網絡和機器人操作單元，實現了對複雜電解過程的精確管控。該系統能根據實時數據自動調整電解槽的電壓、溫度與物料平衡，將單位能耗降至極限，並穩定産出高純度金屬。其自動化物流和閉環控制系統大幅減少了人工幹預與排放，是依托先進自動化技術將能源高效轉化爲戰略資源的關鍵設施。
+			</Text>
+		</Row>
+		<Row>
+			<Tag>TXT_KEY_BUILDING_ELECTRICITY_TO_ALUMINUM_HELP</Tag>
+			<Text>
+				提供5單位的[ICON_RES_ALUMINUM]鋁資源。
+				[NEWLINE]本城市的每處[ICON_RES_GOLD]黃金、[ICON_RES_SILVER]白銀、[ICON_RES_COPPER]赤銅和[ICON_RES_ALUMINUM]鋁+1[ICON_PRODUCTION]産能。
+				[NEWLINE][NEWLINE]城市必須先擁有工廠。
+				[NEWLINE][NEWLINE]需要5單位[ICON_RES_ELECTRICITY]電力。
+			</Text>
+		</Row>
+
 		<Replace Tag="TXT_KEY_BUILDING_SPACESHIP_FACTORY_HELP">
 			<Text>允許你在本城市建造[COLOR_POSITIVE_TEXT]飛船組件[ENDCOLOR] 和[COLOR_POSITIVE_TEXT]太空軌道單位[ENDCOLOR]。[NEWLINE][NEWLINE]需要3單位[ICON_RES_ELECTRICITY]電力。[NEWLINE][NEWLINE]城市必須先擁有工廠。</Text>
 		</Replace>
