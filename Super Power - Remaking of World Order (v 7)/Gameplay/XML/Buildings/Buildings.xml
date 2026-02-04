@@ -797,6 +797,10 @@
 			<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
 		</Row>
 		<Row>
+			<BuildingType>BUILDING_ELECTRICITY_TO_ALUMINUM</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
+		</Row>
+		<Row>
 			<BuildingType>BUILDING_SPACESHIP_FACTORY</BuildingType>
 			<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
 		</Row>
