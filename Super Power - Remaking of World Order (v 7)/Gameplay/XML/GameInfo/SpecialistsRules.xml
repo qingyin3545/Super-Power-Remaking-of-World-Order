@@ -172,6 +172,7 @@
 			<PortraitIndex>0</PortraitIndex>
 			<IconAtlas>BUILDING_SWEDEN_NOBEL_PRIZE_ATLAS</IconAtlas>
             <InstantResearchFromFriendlyGreatScientist>20</InstantResearchFromFriendlyGreatScientist>
+			<TechNoPrereqClasses>TECH_DYNAMITE</TechNoPrereqClasses>
 		</Row>
 		<Row>
 			<Type>BUILDING_SPECIALISTS_SCIENTIFIC_LV3</Type>
@@ -359,7 +360,7 @@
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_SWEDEN_NOBEL_PRIZE</BuildingType>
-			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XL</BuildingClassType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_LARGE</BuildingClassType>
 		</Row>
 		<Row>
 			<BuildingType>BUILDING_SPECIALISTS_SCIENTIFIC_LV3</BuildingType>
@@ -405,6 +406,14 @@
 			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_GLOBAL</BuildingClassType>
 		</Row>
 	</Building_ClassesNeededInCity>
+
+	<Building_PrereqBuildingClasses>
+		<Row>
+			<BuildingType>BUILDING_SWEDEN_NOBEL_PRIZE</BuildingType>
+			<BuildingClassType>BUILDINGCLASS_CITY_SIZE_XL</BuildingClassType>
+			<NumBuildingNeeded>1</NumBuildingNeeded>
+		</Row>
+	</Building_PrereqBuildingClasses>
 
 	<Building_Flavors>
 		<Row>
@@ -482,21 +491,5 @@
 			<FlavorType>FLAVOR_GROWTH</FlavorType>
 			<Flavor>95</Flavor>
 		</Row>
-
-		
-		
 	</Building_Flavors>
-
-
-
-	
-	
-	
-	
-	
-
-
-	<!--***************Specialists Yield Building Texts*****************-->
-
-
 </GameData>

@@ -16059,7 +16059,8 @@
 			<Text>
 				[ICON_BULLET]科学家：+2[ICON_RESEARCH]科研，+2[ICON_GOLD]维护费。
 				[NEWLINE][ICON_BULLET]瑞典或盟友诞生一位大科学家时，为双方带来一次性[ICON_RESEARCH]科研产出，数值相当于该大科学家当前强度的20%。
-				[NEWLINE][NEWLINE]文明的城市数量越多建造成本越高。
+				[NEWLINE][NEWLINE]只能在大型城市（26人口）建造。文明的城市数量越多建造成本越高。
+				[NEWLINE]另外需要文明拥有一座特大城市（40人口），研发炸药后移除该要求。
 			</Text>
 		</Row>
 		<Row Tag="TXT_KEY_YIELD_OVERFLOW">

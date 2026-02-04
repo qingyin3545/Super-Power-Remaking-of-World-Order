@@ -17602,7 +17602,8 @@
             <Text>
 				[ICON_BULLET]Scientists: +2 [ICON_RESEARCH] Science, -2 [ICON_GOLD] Gold for research funds.
                 [NEWLINE][ICON_BULLET]When a great scientist is born in Sweden or an ally, it will bring one-time [ICON_RESEARCH] scientific research output to both parties, equivalent to 20% of the great scientist's current strength.
-				[NEWLINE][NEWLINE]The cost goes up the more cities there are in the empire.
+				[NEWLINE][NEWLINE]Must be built in Large Cities. The cost goes up the more cities there are in the empire.
+				[NEWLINE]Requires a XL City in the empire to unlock built. This requirement is removed upon discovering Dynamite.
             </Text>
         </Row>
 		<Row Tag="TXT_KEY_YIELD_OVERFLOW">
