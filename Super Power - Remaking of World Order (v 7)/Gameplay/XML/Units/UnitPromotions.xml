@@ -944,7 +944,7 @@
 			<Description>TXT_KEY_PROMOTION_MEDIC</Description>
 			<Help>TXT_KEY_PROMOTION_MEDIC_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereq>PROMOTION_MILITIA_COMBAT</PromotionPrereq>
+			<PromotionPrereqOr1>PROMOTION_MILITIA_COMBAT</PromotionPrereqOr1>
 			<OrderPriority>3</OrderPriority>
 			<AdjacentTileHealChange>15</AdjacentTileHealChange>
 			<SameTileHealChange>15</SameTileHealChange>
@@ -962,7 +962,7 @@
 			<Description>TXT_KEY_PROMOTION_MEDIC_II</Description>
 			<Help>TXT_KEY_PROMOTION_MEDIC_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
-			<PromotionPrereq>PROMOTION_MEDIC</PromotionPrereq>
+			<PromotionPrereqOr1>PROMOTION_MEDIC</PromotionPrereqOr1>
 			<OrderPriority>3</OrderPriority>
 			<AdjacentTileHealChange>15</AdjacentTileHealChange>
 			<SameTileHealChange>15</SameTileHealChange>
@@ -1329,7 +1329,7 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>8</OrderPriority>
 			<PortraitIndex>16</PortraitIndex>
-			<PromotionPrereq>PROMOTION_SPECIAL_FORCES_COMBAT</PromotionPrereq>
+			<PromotionPrereqOr1>PROMOTION_SPECIAL_FORCES_COMBAT</PromotionPrereqOr1>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SCOUTING</PediaType>
 			<PediaEntry>TXT_KEY_PROMOTION_SP_FORCE_1</PediaEntry>
@@ -1372,7 +1372,7 @@
 			<Help>TXT_KEY_PROMOTION_SP_FORCE_I_HELP</Help>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<OrderPriority>3</OrderPriority>
-			<PromotionPrereq>PROMOTION_SPECIAL_FORCES_COMBAT</PromotionPrereq>
+			<PromotionPrereqOr1>PROMOTION_SPECIAL_FORCES_COMBAT</PromotionPrereqOr1>
 			<PortraitIndex>49</PortraitIndex>
 			<IconAtlas>PROMOTION_ATLAS</IconAtlas>
 			<PediaType>PEDIA_SCOUTING</PediaType>
