@@ -3657,6 +3657,10 @@
 		</Row>
 
 		<Row>
+			<PromotionType>PROMOTION_KOREA_HWACHA</PromotionType>
+			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
+		</Row>
+		<Row>
 			<PromotionType>PROMOTION_GUN_BARRER_1</PromotionType>
 			<UnitCombatType>UNITCOMBAT_BOMBER</UnitCombatType>
 		</Row>
