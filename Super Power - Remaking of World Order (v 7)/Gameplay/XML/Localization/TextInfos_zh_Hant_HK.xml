@@ -15743,9 +15743,12 @@
 		<Replace Tag="TXT_KEY_DIPLO_TO_TRADE_CITY_TT">
 			<Text>
 				交易城市
-				[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]City needs to Found by either side or Polulation [ENDCOLOR]
+				[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]若城市非双方建立，且人口小于4或者处于[ICON_RESISTANCE]抵抗，交易不可进行[ENDCOLOR]
 			</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_DIPLO_TO_TRADE_CITY_DISABLED">
+			<Text>[COLOR_NEGATIVE_TEXT]城市非双方建立，且人口小于4或者处于[ICON_RESISTANCE]抵抗[ENDCOLOR]</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_HEIGHT">
 			<Text>高度加成</Text>

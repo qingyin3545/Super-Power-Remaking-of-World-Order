@@ -17475,10 +17475,13 @@
 
 		<Replace Tag="TXT_KEY_DIPLO_TO_TRADE_CITY_TT">
 			<Text>
-			Trade a city
-			[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]City needs to Founded by either side or has 4+ Population and not in Resistance[ENDCOLOR]
+				Trade a city
+				[NEWLINE][NEWLINE][COLOR_NEGATIVE_TEXT]City must be founded by either side, or have a 4+ population and is not in [ICON_RESISTANCE] Resistance[ENDCOLOR]
 			</Text>
 		</Replace>
+		<Row Tag="TXT_KEY_DIPLO_TO_TRADE_CITY_DISABLED">
+			<Text>[COLOR_NEGATIVE_TEXT]City must be founded by either side, or have a 4+ population and is not in [ICON_RESISTANCE] Resistance[ENDCOLOR]</Text>
+		</Row>
 
 		<Row Tag="TXT_KEY_EUPANEL_BONUS_HEIGHT">
 			<Text>Height Bouns</Text>
